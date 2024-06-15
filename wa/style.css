@@ -99,5 +99,5 @@ body {
 }
 
 .special-link:hover{
-  color: hotpink; /* Color changes to orange when hovered */
+  color: rgb(102, 18, 60); /* Color changes to orange when hovered */
 }
