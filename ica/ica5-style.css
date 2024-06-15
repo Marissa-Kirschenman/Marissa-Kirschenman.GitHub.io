@@ -50,4 +50,5 @@ article {
 h1 {
   background-image: url(https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/logo.png);
   box-shadow: 5px 5px 5px black;
+  background-color: white;
 }
