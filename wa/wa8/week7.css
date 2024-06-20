@@ -1,0 +1,83 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #C0DCF3;
+}
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: #F1F6FC;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color:#7CAFDE;
+}
+
+nav a:hover {
+   color:#FCBD36;
+   transform: scale(1.50);
+}
+
+h1 {
+    color: #4B91D2;
+    font-family:cursive;
+}
+
+img{
+    width:50vw;
+    height: 70vh;
+    
+}
+
+#snowflake {
+    background-color: snow;
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    position: absolute;
+    left:5vw;
+    top:0;
+    animation: snow-fall;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+#snowflake2{
+    background-color: snow;
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    position: absolute;
+    right:5vw;
+    top:0;
+    animation: snow-fall2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes snow-fall {
+    0% {
+        top: -30%;
+    }
+    100%
+    {
+        top: 100vh;
+    }
+}
+
+@keyframes snow-fall2 {
+    0% {
+        top: -30%;
+    }
+    100%
+    {
+        top: 100vh;
+    }
+}
