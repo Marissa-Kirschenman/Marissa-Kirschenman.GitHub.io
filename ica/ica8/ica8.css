@@ -18,7 +18,7 @@ body{
     position: relative;
     background-color: orangered;
     animation: box2move;
-    animation-duration:  6s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
 }
 
@@ -33,12 +33,12 @@ margin-top: 0;
 
 50% {
  margin-left: 70%;   
- margin-top: 25%;
+ margin-top: 50%;
 }
 
 75% {
   margin-left: 0%;  
-  margin-top: 25%;
+  margin-top: 50%;
 }
 
  to {
