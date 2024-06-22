@@ -1,0 +1,121 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:  rgb(73, 71, 71);
+    margin: 0;
+
+    background-image: url(background.png);
+}
+
+.logo {
+    float: left;
+    max-width:500px;
+    height: 500px;
+    }
+
+header {
+    background-color: #0f4c81;
+    color: goldenrod;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.introduction {
+    background-color: whitesmoke;
+    padding: 10px;
+    margin: 40px;
+    border: 5px solid goldenrod;
+    color: #0f4c81;
+}
+
+main
+{
+    display: flex;
+    flex-direction:column;
+    gap: 20px;
+    padding: 20px;
+}
+.concert {
+    background-color:rgba(255, 255, 255, 0.89) ;
+    border: 2px solid #0f4c81;
+    padding: 15px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+}
+
+.concert h2 {
+    color: #0f4c81;
+    text-decoration-line: underline;
+    text-decoration-color: goldenrod;
+}
+
+.concert p {
+   margin-bottom: 10px;
+}
+
+.concert p, .concert ul {
+    overflow-wrap: break-word;
+}
+
+.description {
+    color:rgb(129, 126, 126);
+}
+
+.logo {
+float: left;
+max-width:100px;
+height: auto;
+order: -1;
+margin-right: 40px;
+}
+
+
+@media (max-width: 400px) {
+    .logo{
+        width: 50px;
+        margin-right: 10px;
+    }
+
+    .concert, .introduction {
+        padding: 10px;
+    }
+}
+
+header {
+    padding: 5px;
+    font-size: 10px;
+}
+
+.description, .concert p {
+    font-size: 0.8rem;
+}
+@media (min-width: 1500px){
+  .logo {
+    width: 150px;
+  }
+  .concert, .introduction {
+    padding: 10px;
+    margin:  20px;
+  }
+  header {
+    padding:  20px;
+  }
+  .description, .concert p {
+    font-size: 1.2rem;
+  }
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
