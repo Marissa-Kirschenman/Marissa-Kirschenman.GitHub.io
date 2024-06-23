@@ -1,3 +1,5 @@
+
+
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color:  rgb(73, 71, 71);
@@ -6,9 +8,10 @@ body{
     background-image: url(background.png);
 }
 
+
 .logo {
     float: left;
-    max-width:500px;
+    max-width: 500px;
     height: 500px;
     }
 
@@ -26,29 +29,40 @@ header {
     margin: 0;
 }
 
+h1 {
+    font-size: 32px;
+}
+
 .introduction {
     background-color: whitesmoke;
-    padding: 10px;
-    margin: 40px;
+    padding: 20px;
     border: 5px solid goldenrod;
     color: #0f4c81;
 }
 
+.introduction img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
 main
 {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     gap: 20px;
     padding: 20px;
 }
 .concert {
-    background-color:rgba(255, 255, 255, 0.89) ;
-    border: 2px solid #0f4c81;
-    padding: 15px;
-    margin: 20px;
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: row;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.89) ;
+    border: 2px solid #0f4c81;
+    padding: 10px;
+    margin: 20px;
 
 }
 
@@ -60,22 +74,105 @@ main
 
 .concert p {
    margin-bottom: 10px;
+   text-align: justify;
+}
+
+.concert ul {
+    padding-inline-start: 20px;
 }
 
 .concert p, .concert ul {
     overflow-wrap: break-word;
+    margin-bottom: 10px;
 }
 
+
 .description {
-    color:rgb(129, 126, 126);
+    color: rgb(179, 175, 175);
+}
+
+
+.concert > .left-column, .concert> .right-column {
+    flex: 1 1 50%;
+}
+
+.concert > .left-column{
+    flex: 1;
+    border-right: 2px solid #0f4c81;
+    padding-right: 10px;
+    margin-right: 20px;
+}
+
+
+.concert > .right-column{
+    flex: 1;
+    padding-left: 10px;
 }
 
 .logo {
 float: left;
-max-width:100px;
+max-width: 100px;
 height: auto;
 order: -1;
 margin-right: 40px;
+}
+
+footer {
+    background-color: #0f4c81;
+    color: white;
+    padding: 20px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border-top: 5px solid goldenrod;
+}
+
+footer h3 {
+    margin-top: 0;
+    color: goldenrod;
+}
+
+footer address {
+    margin: 10px 0;
+    font-style: normal;
+}
+
+footer a {
+    color: goldenrod;
+    text-decoration: none;
+}
+
+footer a:hover, footer a:focus {
+    text-decoration: underline;
+}
+
+footer p {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+*,*::before, *:after {
+    box-sizing: border-box;
+}
+
+
+.back-to-top {
+position: fixed;
+bottom: 20px;
+right: 10px;
+border: solid white;
+background-color:#0f4c81;
+color: white;
+cursor: pointer;
+padding: 10px 20px;
+border-radius: 5px;
+text-align: center;
+text-decoration: none;
+font-size: 16px;
+}
+
+.back-to-top:hover
+{
+background-color: goldenrod;
 }
 
 
@@ -88,11 +185,18 @@ margin-right: 40px;
     .concert, .introduction {
         padding: 10px;
     }
+
+    body, .right-text{
+        font-size: 1.2rem;
+    }
+    .description, .concert p {
+        font-size: 1rem;
+    }
 }
 
 header {
     padding: 5px;
-    font-size: 10px;
+    font-size: 1.2rem;
 }
 
 .description, .concert p {
