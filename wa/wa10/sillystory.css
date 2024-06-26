@@ -1,0 +1,50 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 350px;
+    background-color: rgb(243, 189, 221);
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  div {
+    padding-bottom: 20px;
+  }
+
+  input[type="text"] {
+    padding: 5px;
+    width: 150px;
+  }
+
+  p {
+    background: rgb(240, 146, 203);
+    color: #000000;
+    padding: 10px;
+    visibility: hidden;
+    border-radius: 8px;
+    border-color: white;
+  }
+
+  button {
+    background-color: rgb(39, 152, 209);
+    color: white;
+    padding: 10px 20px;
+    border-width: 2px;
+    border-color: white;
+    font-size: 1em;
+  }
+
+  button:hover {
+    background-color: rgb(4, 184, 255);
+  }
+
+.story {
+    background-color: rgb(233, 100, 180);
+    padding: 30px;
+    margin: 20px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    position: fixed;
+
+  }
