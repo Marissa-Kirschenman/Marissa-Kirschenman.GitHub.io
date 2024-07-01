@@ -1,12 +1,14 @@
 const btn = document.querySelector('button');
 btn.addEventListener('click', () => displayMessage('Brian: Hi there, how are you today?', 'chat'));
 
-function displayMessage(msgText, msgType) {
+function displayMessage(msgText, msgType)
+ {
 
     const body = document.body;
     const panel = document.createElement('div');
     panel.setAttribute('class', 'msgBox');
     body.appendChild(panel);
+
 
     const msg = document.createElement('p');
     msg.textContent = msgText;
@@ -15,6 +17,10 @@ function displayMessage(msgText, msgType) {
     const closeBtn = document.createElement('button');
   closeBtn.textContent = 'x';
   panel.appendChild(closeBtn);
+
+
+
+
 
   closeBtn.onclick = function() {
     panel.parentNode.removeChild(panel);
