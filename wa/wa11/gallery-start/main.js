@@ -3,10 +3,10 @@ const thumbBar = document.querySelector('.thumb-bar');
 const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
-const images = ['beach.jpg', 'boulder.png', 'dog.png', 'snow.png', 'rox.png'];
+const images = ['beach.png', 'boulder.png', 'dog.png', 'snow.png', 'rox.png'];
 
 const alts = {
-    'beach.jpg': 'Destin Flordia beach',
+    'beach.png': 'Destin Flordia beach',
     'boulder.jpg': 'Farrand field',
     'dog.png': 'My dog Lulu',
     'snow.png': 'Estes Park Colorado',
