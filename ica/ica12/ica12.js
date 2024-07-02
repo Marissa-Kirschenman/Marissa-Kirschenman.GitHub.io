@@ -1,37 +1,56 @@
-const newQuoteButton = document.querySelector('#js-new-quote');
-const showAnswerButton = document.querySelector('#js-tweet');
+document.addEventListener('DOMContentLoaded', function() {
+    const quoteButton = document.querySelector('#js-new-quote');
+    const answerLink = document.querySelector('#js-tweet');
+    const quoteDisplay = document.querySelector ('#js-quote-text');
+    const answerDisplay = document.querySelector('#js-answer-text');
+    const apiEndpoint = 'https://trivia.cyberwisp.com/getrandomchristmasquestion';
 
-newQuoteButton.addEventListener('click', getQuote);
-showAnswerButton.addEventListener('click', showAnswer);
+quoteButton.addEventListener('click', getQuote);
+function getQuote() {
+    answerDisplay.textContent = '';
+    answerLink.removeAttribute('data-answer');
 
-function getQuote(){
-    console.log('new quote button clicked');
-}
 
-const apiEndpoint = 'https://trivia.cyberwisp.com/getrandomchristmasquestion';
+    fetch(apiEndpoint)
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error ('Alert: An error occured generating trivia');
+        }
 
-fetch(apiEndpoint)
-.then(response => {
-    if (!response.ok) {
-        throw new Error ('Network response was not ok')
-    }
-    return response .json();
-})
+    })
 
-.then(data => {
-    console.log(data);
-    displayQuote(data.question)
+    .then(data => {
+        displayQuote(data.question);
+        answerLink.dataset.answer = data.answer;
+       
+    })
 
-})
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error fetching triva question: '+ error.message);
+    });
 
-.catch(error => {
-    console.error ('There has been a problem with your fetch operation:', error);
-    alert('Failed to fetch quote. Please try again later.')
-});
+} 
 
 function displayQuote(quote) {
-    const quoteTextElement = document.querySelector('#js-quote-text');
-    quoteTextElement.textContent= quote;
+    quoteDisplay.textContent = quote;
 }
 
-window.addEventListener('load', getQuote);
+
+answerLink.addEventListener('click', (event) => {
+    event.preventDefault();  
+    displayAnswer(answerLink.dataset.answer);
+});
+
+function displayAnswer(answer) {
+    if (answer) {
+        answerDisplay.textContent = answer;
+    } else {
+        answerDisplay.textContent = 'error generating answer';
+    }
+}
+getQuote();
+
+});
