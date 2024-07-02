@@ -1,11 +1,13 @@
 h1 {
-  font-family: helvetica, arial, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
+  color: rgb(182, 169, 148);
 }
 
 body {
   width: 640px;
   margin: 0 auto;
+  background-color: rgb(220, 240, 247);
 }
 
 .full-img {
@@ -39,6 +41,11 @@ button {
   cursor: pointer;
   top: 2px;
   left: 2px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+button:hover {
+  background: rgb(150, 150, 150, 0.8);
 }
 
 .thumb-bar{
