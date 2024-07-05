@@ -24,22 +24,22 @@ function createDigitButtons() {
 function handleDigitClick(digit){
     if (currentNumber.length <10) {
     currentNumber += digit;
-    document.getElementById('current-number').innerText = `Current number: ${currentNumber}`;
+    document.getElementById('current-number').innerText = `Current Number: ${formatPhoneNumber(currentNumber)}`;
     } else {
     alert('Maxium number length reached.');
 }
 }
 
 function moveButton(button) {
-    const maxDistance = 35;
+    const maxDistance = 65;
     const container = document.getElementById('digit-buttons');
     const containerWidth = container.clientWidth;
     const containerHeight = container.clientHeight;
     const buttonWidth = button.offsetWidth;
     const buttonHeight = button.offsetHeight;
 
-    let newLeft = parseFloat(button.style.left)+ (Math.random() * maxDistance - maxDistance);
-    let newTop = parseFloat(button.style.top)+ (Math.random() * maxDistance - maxDistance);
+    let newLeft = parseFloat(button.style.left)+ (Math.random() * maxDistance - maxDistance / 2);
+    let newTop = parseFloat(button.style.top)+ (Math.random() * maxDistance - maxDistance / 2);
 
    
     button.style.left = `${newLeft}px`;
@@ -49,17 +49,21 @@ function moveButton(button) {
 
 function restart() {
     currentNumber = '';
-    document.getElementById('current-number').innerText = `Current number: ${currentNumber}`;
+    document.getElementById('current-number').innerText = `Current Number: ${formatPhoneNumber(currentNumber)}`;
     createDigitButtons();
 }
 
 function submit() {
     if (currentNumber.length === 10) {
-        alert(`Sumbitted number: ${currentNumber}`);
+        alert(`Sumbitted number: ${formatPhoneNumber(currentNumber)}`);
     } else {
     alert('Please enter a 10-digit phone number.');
 }
 }
 
-
-
+function formatPhoneNumber(number) {
+  if (number.length === 0) {
+    return '';
+  }
+  return number.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+}

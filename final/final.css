@@ -8,7 +8,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 #phone-number-container {
@@ -23,19 +23,22 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    margin-bottom: 10px;
+    margin: 5px;
     width: 200px;
-    height: 200px;
+    height: 300px;
     position: relative;
 
 }
 
 #digit-buttons button {
-    width: 30px; 
-    height: 30px;
+    width: 50px; 
+    height: 50px;
     font-size: 20px;
-    position: relative;
+    position: absolute;
+    
 }
+
+
 
 #controls {
     margin-top: 10px;
@@ -46,4 +49,16 @@ body {
     margin: 5px;
     padding: 10px 20px;
     font-size: 20px;
+}
+
+#current-number {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: rgb(54, 117, 244);
+    position: relative;
+    z-index: 10;
+    background-color: rgb(227, 237, 245);
+    padding: 5px;
+    border-radius: 5px;
 }
